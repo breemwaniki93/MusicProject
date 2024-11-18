@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Karaoke Night | Rooms</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+</head>
+<body>
+<div id="header"> <a href="{% url 'index' %}" id="logo"><img src="{% static 'images/logo.png' %}" alt=""></a>
+ <!---- <ul id="navigation">
+    <li><a href="index.html">home</a></li>
+    <li><a href="about.html">about</a></li>
+    <li class="selected"><a href="rates.html">rates</a></li>
+    <li><a href="blog.html">blog</a></li>
+    <li><a href="contact.html">contact us</a></li>
+  </ul>
+</div>
+<div class="body">
+  <ul class="navigation">
+    <li> <a href="menu.html" id="link1">Menu</a> <a href="menu.html"><img src="images/button-menu.jpg" alt=""></a> </li>
+    <li> <a href="rooms.html" id="link2">Rooms</a> <a href="rooms.html"><img src="images/button-rooms.jpg" alt=""></a> </li>
+    <li> <a href="events.html"><img src="images/button-events.jpg" alt=""></a> <a href="events.html" id="link3">Events</a> </li>
+    <li> <a href="drinks.html"><img src="images/button-drinks.jpg" alt=""></a> <a href="drinks.html" id="link4">Drinks</a> </li>
+  </ul>---->
+    <ul id="navigation">
+      <li class="selected"><a href="{% url 'index' %}">home</a></li>
+      <li><a href="{% url 'about' %}">about</a></li>
+      <li><a href="{% url 'rates' %}">rates</a></li>
+      <li><a href="{% url 'blogs' %}">blog</a></li>
+      <li><a href="{% url 'contact' %}">contact us</a></li>
+    </ul>
+    <ul class="navigation">
+      <li> <a href="{% url 'menu' %}" id="link1">Menu</a> <a href="{% url 'menu' %}"><img src="{% static 'images/button-menu.jpg' %}" alt=""></a> </li>
+      <li> <a href="{% url 'rooms' %}" id="link2">Rooms</a> <a href="{% url 'rooms' %}"><img src="{% static 'images/button-rooms.jpg' %}" alt=""></a> </li>
+      <li> <a href="{% url 'events' %}"><img src="{% static 'images/button-events.jpg' %}" alt=""></a> <a href="{% url 'events' %}" id="link3">Events</a> </li>
+      <li> <a href="{% url 'drinks' %}"><img  src="{% static 'images/button-drinks.jpg' %}" alt=""></a> <a href="{% url 'drinks' %}" id="link4">Drinks</a> </li>
+    </ul>
+  <div id="rooms">
+    <h2>Rooms</h2>
+    <div>
+      <h5>Private Karaoke Room</h5>
+      <h6>The Opal Chamber</h6>
+      <a href="#"><img src="{% static 'images/girls-singing3.jpg' %}" alt=""></a>
+     <p>Perfect for small groups and intimate gatherings. Enjoy top-of-the-line sound systems, cozy seating, and vibrant lighting. Ideal for friends, family, or corporate teams looking to sing and socialize in style.</p>
+    <span>Capacity: 10 pax</span> <span>Price: &pound;50 per hour</span>
+    <div>
+      <h5>VIP Karaoke Room</h5>
+      <h6>The Royal Suite</h6>
+      <a href="#"><img src="{% static 'images/boys-dringking4.jpg' %}" alt=""></a>
+      <p>A larger, more luxurious room featuring premium audio-visual equipment, plush seating, and a private bar. Perfect for VIP guests or larger groups looking for an upscale karaoke experience.</p>
+    <span>Capacity: 20 pax</span> <span>Price: &pound;100 per hour</span>
+    <div>
+      <h5>Event Hall</h5>
+      <h6>Starlight Arena</h6>
+      <a href="#"><img src="{% static 'images/group-singing3.jpg' %}" alt=""></a>
+      <p>Our spacious event hall is perfect for large parties, corporate events, or even live performances. Fully equipped with a large stage, professional sound and lighting systems, and plenty of room for guests to mingle and enjoy.</p>
+    <span>Capacity: 50 pax</span> <span>Price: &pound;300 per hour</span>
+  </div>
+</div>
+<div id="footer">
+  <div>
+    <div id="first"> <a href="#" class="logo">Karaoke Night</a>
+      <p>bridgettemwaniki@gmail.com Tel: +54797113655</p>
+      <p>Located at: 123 Party Ave, Suite 100, Cityville</p>
+      <p>Open daily from 6 PM to 2 AM. Join us for the best karaoke experience!</p>
+    </div>
+    <div>
+      <h3><span>Connect</span> with us</h3>
+      <a href="#" id="facebook">Facebook</a> <a href="#" id="twitter">Twitter</a> </div>
+    <div>
+      <h4>Subscribe to our <span>NEWSLETTER</span></h4>
+      <p>Stay updated with the latest karaoke events, promotions, and more!</p>
+      <p>Sign up to receive exclusive discounts and event invitations directly to your inbox.</p>
+      <form action="#">
+          <label for="input"></label><input type="text" id="input" value="Enter Email Address" onBlur="this.value=!this.value?'Enter Email Address':this.value;" onFocus="this.select()" onClick="this.value='';">
+        <input type="submit" id="submit" value="">
+      </form>
+    </div>
+    <p>Copyright &copy; 2026 <a href="#">Karaoke Hub</a> All rights reserved | py</p>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

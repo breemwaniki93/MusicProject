@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Karaoke Night</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+</head>
+<body>
+<div id="header">
+  <div> <a href="index.html" id="logo"><img src="{% static 'images/logo.png' %}" alt=""></a>
+    <ul id="navigation">
+      <li class="selected"><a href="{% url 'index' %}">home</a></li>
+      <li><a href="{% url 'about' %}">about</a></li>
+      <li><a href="{% url 'rates' %}">rates</a></li>
+      <li><a href="{% url 'blogs' %}">blog</a></li>
+      <li><a href="{% url 'contact' %}">contact us</a></li>
+    </ul>
+    <ul class="navigation">
+      <li> <a href="{% url 'menu' %}" id="link1">Menu</a> <a href="{% url 'menu' %}"><img src="{% static 'images/button-menu.jpg' %}" alt=""></a> </li>
+      <li> <a href="{% url 'rooms' %}" id="link2">Rooms</a> <a href="{% url 'rooms' %}"><img src="{% static 'images/button-rooms.jpg' %}" alt=""></a> </li>
+      <li> <a href="{% url 'events' %}"><img src="{% static 'images/button-events.jpg' %}" alt=""></a> <a href="{% url 'events' %}" id="link3">Events</a> </li>
+      <li> <a href="{% url 'drinks' %}"><img src="{% static 'images/button-drinks.jpg' %}" alt=""></a> <a href="{% url 'drinks' %}" id="link4">Drinks</a> </li>
+    </ul>
+  </div>
+</div>
+<div id="body">
+  <div>
+  <h2>About Karaoke Hub</h2>
+  <p>Welcome to **Karaoke Hub**—your ultimate destination for music, fun, and unforgettable moments! Whether you're looking for a night out with friends at a local karaoke bar, a private karaoke room for your group, or an online platform to sing your heart out, **Karaoke Hub** is here to make your singing experience extraordinary.</p>
+  <p>Our platform is designed to provide an engaging and enjoyable experience for karaoke enthusiasts of all levels. With a wide variety of songs, top-quality sound systems, and a vibrant community, you'll always find a place to showcase your vocal talent and have a great time.</p>
+  <p>If you're new to karaoke or a seasoned pro, **Karaoke Hub** offers a welcoming environment for everyone. Explore our events, join our karaoke nights, or simply browse our services to see how we can help make your next celebration or night out one to remember!</p>
+</div>
+  <div id="gallery">
+    <h2><a href="{% url 'gallery' %}">Photo Gallery</a></h2>
+    <ul>
+      <li><a href="{% url 'gallery' %}"><img src="{% static 'images/girl-smiling.jpg' %}" alt=""></a></li>
+      <li><a href="{% url 'gallery' %}"><img src="{% static 'images/boys-drinking.jpg' %}" alt=""></a></li>
+      <li><a href="{% url 'gallery' %}"><img src="{% static 'images/group-singing.jpg' %}" alt=""></a></li>
+      <li><a href="{% url 'gallery' %}"><img src="{% static 'images/girl-sing.jpg' %}" alt=""></a></li>
+    </ul>
+  </div>
+</div>
+<div id="footer">
+  <div>
+    <div id="first"> <a href="#" class="logo">Karaoke Night</a>
+      <p>bridgettemwaniki@gmail.com Tel: +254798723867</p>
+    <p>Located at: 123 Party Ave, Suite 100, Cityville</p>
+      <p>Open daily from 6 PM to 2 AM. Join us for the best karaoke experience!</p>
+    </div>
+    <div>
+      <h3><span>Connect</span> with us</h3>
+      <a href="#" id="facebook">Facebook</a> <a href="#" id="twitter">Twitter</a> </div>
+    <div>
+      <h4>Subscribe to our <span>NEWSLETTER</span></h4>
+   <p>Stay updated with the latest karaoke events, promotions, and more!</p>
+      <p>Sign up to receive exclusive discounts and event invitations directly to your inbox.</p>
+      <form action="#">
+          <label for="input"></label><input type="text" id="input" value="Enter Email Address" onBlur="this.value=!this.value?'Enter Email Address':this.value;" onFocus="this.select()" onClick="this.value='';">
+        <input type="submit" id="submit" value="">
+      </form>
+    </div>
+    <p>Copyright &copy; 2026 <a href="#">Karaoke Hub</a> All rights reserved | </p>
+  </div>
+</div>
+</body>
+</html>
